@@ -8,21 +8,6 @@
 		}
 	}
 }
-
-@media screen and (min-width: 40em) {
-	.products-grid {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-gap: 15px;
-		div {
-			img {
-				width: 100%;
-				border-radius: 5px;
-			}
-		}
-	}
-}
-
 .message-error {
 	background-color: red;
 	color: white;
@@ -40,5 +25,27 @@
 	:nth-child(1) {
 		margin-right: 10px;
 	}
-	
 }
+
+@media screen and (min-width: 40em) {
+	.products-grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 15px;
+		div {
+			img {
+				width: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+.valid {
+	border: 1px solid green;
+	transition: all linear .5s;
+};
+.invalid {
+	border: 1px solid red;
+	transition: all linear .5s;
+};

@@ -1,4 +1,26 @@
 <section>
+  <h1>NgClass & NgStyle</h1>
+  <input type="string" required #nameInput4="ngModel" [(ngModel)]="person.name" >
+  <p class="message-error" [class.invalid]="nameInput4.invalid">Campo requerido</p>
+
+  <div class="dynamicImg">
+    <div>
+      <input type="number" required #boxWidth="ngModel" [(ngModel)]="boxStyle.width" >
+      <input type="number" required #boxHeight="ngModel" [(ngModel)]="boxStyle.height" >
+      <input type="color" required #boxBackgroundColor="ngModel" [(ngModel)]="boxStyle.backgroundColor">
+    </div>
+    <div [ngStyle]="{
+      'width.px': boxStyle.width,
+      'height.px': boxStyle.height,
+      'background-color': boxStyle.backgroundColor
+    }"></div>
+  </div>
+</section>
+<hr [ngClass]="{
+  valid: nameInput4.valid,
+  invalid: nameInput4.invalid
+}">
+<section>
   <h1>Class & Style</h1>
   <input type="string" required #nameInput2="ngModel" [(ngModel)]="person.name" >
   <p class="message-error" [class.invalid]="nameInput2.invalid">Campo requerido</p>
@@ -6,7 +28,6 @@
   <input type="string" required #nameInput3="ngModel" [(ngModel)]="person.name" >
   <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Text text text</p>
   <br />
-
   <h2>Dynamic width img</h2>
   <div class="dynamicImg">
     <div>

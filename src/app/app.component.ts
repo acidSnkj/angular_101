@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
+import { BoxStyle, Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,11 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  boxStyle: BoxStyle = {
+    width: 100,
+    height: 100,
+    backgroundColor: 'red'
+  }
   widthImg = 10;
   person = {
     name: '',

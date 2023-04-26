@@ -4,3 +4,9 @@ export  interface Product {
 	image: string;
 	category?: string;
 }
+
+export interface BoxStyle {
+	width: number;
+	height: number;
+	backgroundColor: string;
+}
