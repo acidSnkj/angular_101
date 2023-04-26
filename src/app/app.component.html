@@ -1,3 +1,23 @@
+<section>
+  <h1>Class & Style</h1>
+  <input type="string" required #nameInput2="ngModel" [(ngModel)]="person.name" >
+  <p class="message-error" [class.invalid]="nameInput2.invalid">Campo requerido</p>
+  <label>Nombre </label>
+  <input type="string" required #nameInput3="ngModel" [(ngModel)]="person.name" >
+  <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Text text text</p>
+  <br />
+
+  <h2>Dynamic width img</h2>
+  <div class="dynamicImg">
+    <div>
+      <input type="number" #widthNumber="ngModel" [(ngModel)]="widthImg" />
+    </div>
+    <div>
+      <img [style.width.px]="widthNumber.value" src="https://picsum.photos/200/300" />
+    </div>
+  </div>
+</section>
+<hr>
 <input required [(ngModel)]="person.name">
 <h2>[]ngSwitch</h2>
 <div [ngSwitch]="person.name">
