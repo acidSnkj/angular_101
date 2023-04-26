@@ -1,4 +1,16 @@
 <section>
+  <h1>Form</h1>
+  <form (ngSubmit)="register()" #myForm="ngForm">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" required [(ngModel)]="user.name" name="name">
+      <p>Mensajes de errores</p>
+    </div>
+    <button [disabled]="myForm.invalid" type="submit">Registrarse</button>
+  </form>
+</section>
+
+<section>
   <h1>NgClass & NgStyle</h1>
   <input type="string" required #nameInput4="ngModel" [(ngModel)]="person.name" >
   <p class="message-error" [class.invalid]="nameInput4.invalid">Campo requerido</p>

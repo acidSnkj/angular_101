@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BoxStyle, Product } from './product.model';
+import { BoxStyle, Product, User } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,12 @@ import { BoxStyle, Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  user: User = {
+    name: '',
+    email: '',
+    password: '',
+    checkPassword: ''
+  };
   boxStyle: BoxStyle = {
     width: 100,
     height: 100,
@@ -38,6 +44,9 @@ export class AppComponent {
   }
   removeName(position: number) {
     this.names.splice(position, 1);
+  }
+  register() {
+    console.log(this.user);
   }
 }
 

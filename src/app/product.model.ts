@@ -10,3 +10,10 @@ export interface BoxStyle {
 	height: number;
 	backgroundColor: string;
 }
+
+export interface User {
+	name: string;
+	email: string;
+	password: string;
+	checkPassword: string;
+}
