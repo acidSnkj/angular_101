@@ -1,4 +1,11 @@
 <input required [(ngModel)]="person.name">
+<h2>[]ngSwitch</h2>
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Jorge'">Jorge</p>
+  <p *ngSwitchCase="'Juan'">Juan</p>
+  <p *ngSwitchCase="'Pedro'">Pedro</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
 <p>{{ person.name }}</p>
 <p *ngIf="person.name === 'Jorge'; else elseBlock">My content</p>
 <ng-template #elseBlock>
