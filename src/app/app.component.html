@@ -1,0 +1,21 @@
+<input required [(ngModel)]="person.name">
+<p>{{ person.name }}</p>
+<p *ngIf="person.name === 'Jorge'; else elseBlock">My content</p>
+<ng-template #elseBlock>
+  <p>Log in to see your content</p>
+</ng-template>
+
+<hr>
+<h2>*ngFor</h2>
+<input required [(ngModel)]="newName">
+<button (click)="addNewName()">Add Name</button>
+<ul>
+    <li *ngIf="names.length === 0">No names added yet</li>
+    <li *ngFor="let name of names; index as i">
+      {{name}} - {{i}}
+      <button (click)="removeName(i)">Delete name</button>
+    </li>
+</ul>
+
+<hr>
+
